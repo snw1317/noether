@@ -5,6 +5,8 @@
 #include <yaml-cpp/yaml.h>
 #include <stdexcept>
 #include <string>
+#include <typeinfo>
+#include <ostream>
 
 namespace noether
 {
@@ -34,13 +36,11 @@ inline T getMember(const YAML::Node& n, const std::string& key)
   }
 }
 
-
 }  // namespace noether
-
-using namespace noether;
 
 namespace YAML
 {
+using noether::getMember;
 
 template <typename FloatT>
 struct convert<Eigen::Matrix<FloatT, 2, 1>>
@@ -129,3 +129,13 @@ struct convert<Eigen::Transform<FloatT, 3, Eigen::Isometry>>
 };
 
 }  // namespace YAML
+
+namespace noether
+{
+inline std::ostream& operator<<(std::ostream& os, const ToolPaths& paths)
+{
+  YAML::Node node(paths);
+  os << node;
+  return os;
+}
+}  // namespace noether

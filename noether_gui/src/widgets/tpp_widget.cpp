@@ -570,8 +570,7 @@ void TPPWidget::onSaveToolPath(const bool /*checked*/)
     if (!out)
       throw std::runtime_error("Failed to open file for writing: " + file.toStdString());
 
-    YAML::Node node(tool_paths_);
-    out << node;
+    out << tool_paths_;
   }
   catch (const std::exception& ex)
   {
