@@ -7,6 +7,7 @@
 #include <string>
 #include <typeinfo>
 #include <ostream>
+#include <noether_tpp/core/types.h>
 
 namespace noether
 {
