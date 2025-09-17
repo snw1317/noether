@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>noether_tpp_server</name>
+  <version>0.1.0</version>
+  <description>ROS2 service server for noether tool path planner</description>
+
+  <maintainer email="example@todo.com">TODO Maintainer</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <build_depend>yaml-cpp</build_depend>
+  <build_depend>noether_gui</build_depend>
+  <build_depend>boost_plugin_loader</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>yaml-cpp</exec_depend>
+  <exec_depend>noether_gui</exec_depend>
+  <exec_depend>boost_plugin_loader</exec_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
