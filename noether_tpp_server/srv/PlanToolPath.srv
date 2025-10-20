@@ -1,0 +1,6 @@
+string mesh_file
+string config_file
+string output_file
+---
+bool success
+string yaml
